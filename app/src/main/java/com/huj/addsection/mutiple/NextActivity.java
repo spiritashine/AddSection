@@ -1,4 +1,4 @@
-package com.huj.addsection;
+package com.huj.addsection.mutiple;
 
 import android.content.Intent;
 import android.os.Parcelable;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.huj.addsection.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

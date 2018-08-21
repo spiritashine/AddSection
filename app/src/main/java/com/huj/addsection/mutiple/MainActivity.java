@@ -1,4 +1,4 @@
-package com.huj.addsection;
+package com.huj.addsection.mutiple;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.huj.addsection.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

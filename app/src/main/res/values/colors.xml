@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#dddddd</color>
-    <color name="colorPrimaryDark">#dddddd</color>
-    <color name="colorAccent">#dddddd</color>
+    <color name="colorPrimary">#999999</color>
+    <color name="colorPrimaryDark">#999999</color>
+    <color name="colorAccent">#999999</color>
+    <color name="textColor">#222222</color>
+
+    <!-- APP背景色 -->
+    <color name="background">#FFFFFF</color>
+    <color name="backgroundtitle">#F5F5F5</color>
+    <color name="backgroundselecteditem">#EFEFEF</color>
+    <color name="backgroundselectedImage">#99EFEFEF</color>
+    <color name="backgroundgrey">#dfdfdf</color>
+    <color name="backgroundgreydark">#cccccc</color>
+
+    <!-- 白 -->
+    <color name="white">#ffffff</color>
+    <!-- 黑 -->
+    <color name="black">#000000</color>
+    <!-- 红 -->
+    <color name="red">#ff0000</color>
+    <!-- 绿 -->
+    <color name="green">#00ff00</color>
+    <!-- 黄 -->
+    <color name="yellow">#ffff00</color>
+    <!-- 蓝 -->
+    <color name="blue">#0000ff</color>
+
+    <!-- 灰 -->
+    <color name="grey">#757575</color>
+
+
+
+    <!-- 文本颜色 -->
+    <color name="text_tv_normal">#31353B</color>
+    <color name="text_tv_hint">#C8CACC</color>
+    <color name="line">#C8CACC</color>
+    <color name="text_tv_grey">#757575</color>
+    <color name="text_tv_green">#008000</color>
+    <color name="text_tv_red">#E32B29</color>
+    <color name="boder">#C8CACC</color>
+    <color name="text_tv_blue">#0066FF</color>
+
+    <!-- button -->
+    <color name="btn_pressed">#0066FF</color>
+    <color name="btn_clickable">#4197FE</color>
+    <color name="btn_unclickable">#C8CACC</color>
+
+    <color name="swipe_menu_pressed">#e0e0e0</color>
+    <color name="swipe_menu_unpressed">#f0f0f0</color>
 </resources>

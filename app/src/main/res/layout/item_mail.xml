@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/item_mail_icon"
+        android:layout_margin="12dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/item_mail_name"
+        android:text="namenamenamenamenamenamenamenamnamenamenamenameenamenamenamename"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="6dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:maxLength="28"
+        android:layout_toRightOf="@+id/item_mail_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/item_mail_title"
+        android:text="titletitletitletitletitletitletitletitletitletitletitletitletitletitletitle"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="6dp"
+        android:paddingRight="14dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_below="@+id/item_mail_name"
+        android:layout_toRightOf="@+id/item_mail_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/item_mail_content"
+        android:text="contentcontentcontentcontentcontentcontentcontentcontent"
+        android:textColor="@color/textColor"
+        android:lines="1"
+        android:ellipsize="end"
+        android:paddingRight="14dp"
+        android:layout_below="@+id/item_mail_title"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/item_mail_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/item_mail_time"
+        android:text="8月18日"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="6dp"
+        android:paddingRight="14dp"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/item_mail_name"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginTop="8dp"
+        android:background="#eee"
+        android:layout_below="@+id/item_mail_content"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"/>
+</RelativeLayout>

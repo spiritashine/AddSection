@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mail.MailLogActivity">
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/username"
+        android:hint="输入邮箱地址"
+        android:text="huj@xingyuanauto.com"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <EditText
+        android:inputType="textPassword"
+        android:text="spiritashine,.897392"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:hint="输入邮箱密码"
+        android:id="@+id/password"
+        android:layout_below="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:hint="登 录"
+        android:onClick="submit"
+        android:id="@+id/submit"
+        android:layout_below="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</RelativeLayout>
