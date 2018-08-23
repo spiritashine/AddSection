@@ -1,10 +1,8 @@
-package com.huj.addsection.mail;
+package com.huj.addsection.mail.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.text.format.Time;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,8 +16,6 @@ import com.huj.addsection.mail.bean.Mail;
 import com.huj.addsection.mail.manager.TimeManager;
 
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Timer;
 
 /**
  * Created by huj on 2017/9/4.
@@ -43,7 +39,7 @@ public class MailListAdapter extends RecyclerView.Adapter<MailListAdapter.MyView
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.item_mail, null);
+        View view = inflater.inflate(R.layout.item_mail_list, null);
         MyViewHolder holder = new MyViewHolder(view);
         return holder;
     }

@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.huj.addsection.BaseApplication;
+import com.huj.addsection.App;
 import com.huj.addsection.mail.bean.Addresser;
 import com.huj.addsection.mail.bean.Protocol;
 
@@ -24,7 +24,7 @@ public class DBAddresser {
 
     public static DBAddresser getInstance() {
         if (dBAddresser == null) {
-            dBAddresser = new DBAddresser(BaseApplication.getApplication());
+            dBAddresser = new DBAddresser(App.getApplication());
         }
         return dBAddresser;
     }

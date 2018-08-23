@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+    <RelativeLayout
+        android:id="@+id/rl_file_attach"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/backgroundselecteditem"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/iv_file_attach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:src="@mipmap/attach_file_default" />
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_file_attach"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="middle"
+            android:lines="1"
+            android:padding="@dimen/padding_normal"
+            android:text="1212121.mp3"
+            android:textColor="@color/text_tv_normal"
+            android:textSize="@dimen/text_size_smaller" />
+
+        <TextView
+            android:id="@+id/tv_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="middle"
+            android:padding="@dimen/padding_normal"
+            android:text="12MB"
+            android:textColor="@color/text_tv_grey"
+            android:textSize="@dimen/text_size_smaller" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pic_attach"
+        android:background="@drawable/boder_rectangle"
+        android:padding="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <ImageView
+            android:id="@+id/iv_pic_attach"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/attach_file_icon_image" />
+
+        <TextView
+            android:id="@+id/tv_pic_size"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/gradient_space_grey"
+            android:text="12MB"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_smaller" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_delete_attach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/attach_item_delete" />
+
+    <RelativeLayout
+        android:id="@+id/rl_add_attach"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/boder_rectangle"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/attach_item_add" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

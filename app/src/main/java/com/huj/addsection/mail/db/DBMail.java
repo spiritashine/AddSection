@@ -8,7 +8,7 @@ import android.text.format.Formatter;
 import android.util.Log;
 
 
-import com.huj.addsection.BaseApplication;
+import com.huj.addsection.App;
 import com.huj.addsection.mail.bean.Addresser;
 import com.huj.addsection.mail.bean.Attach;
 import com.huj.addsection.mail.bean.Contacts;
@@ -31,7 +31,7 @@ public class DBMail {
     public static DBMail getInstance() {
         synchronized (DBMail.class) {
             if (dBMail == null) {
-                dBMail = new DBMail(BaseApplication.getApplication());
+                dBMail = new DBMail(App.getApplication());
             }
         }
         return dBMail;
@@ -248,7 +248,7 @@ public class DBMail {
                 String name = string.substring(0, string.indexOf("<"));
                 contacts = new Contacts(name, mail);
             }
-            if (contacts.mail.equals(BaseApplication.addresser.account)) {
+            if (contacts.mail.equals(App.addresser.account)) {
                 contacts.name = "我";
             }
             return contacts;
@@ -280,7 +280,7 @@ public class DBMail {
             String[] split = string.split(";");
             for (int i = 0; i < split.length; i++) {
                 File file = new File(split[i]);
-                list.add(new Attach(file.getName(), file.getAbsolutePath(), Formatter.formatFileSize(BaseApplication.getApplication(), file.length())));
+                list.add(new Attach(file.getName(), file.getAbsolutePath(), Formatter.formatFileSize(App.getApplication(), file.length())));
             }
         }
         return list;
@@ -429,7 +429,7 @@ public class DBMail {
      */
     public ArrayList<Mail> selectInbox(Addresser addresser) {
         String tableName = "table_" + addresser.account.substring(0, addresser.account.indexOf("@"));
-        String str_sql = "select * from " + tableName + " where type = " + Mail.MAIL_TYPE_INBOX + " order by sendDate desc; ";
+        String str_sql = "select * from " + tableName + " where type = " + Mail.MAIL_TYPE_INBOX + " order by sendDate desc limit " + Mail.PAGE_COUNT + " offset 0 ; ";
         ArrayList<Mail> select = select(str_sql);
         return select;
     }

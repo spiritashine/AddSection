@@ -11,13 +11,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.huj.addsection.BaseApplication;
+import com.huj.addsection.App;
 import com.huj.addsection.R;
 import com.huj.addsection.mail.bean.Addresser;
 import com.huj.addsection.mail.bean.MyAuthenticator;
 import com.huj.addsection.mail.bean.Protocol;
 import com.huj.addsection.mail.db.DBAddresser;
 import com.huj.addsection.mail.db.DBMail;
+import com.huj.addsection.mail.utils.LoginUtils;
 import com.huj.addsection.mail.manager.NetManager;
 import com.huj.addsection.mail.manager.PreferenceManager;
 
@@ -41,8 +42,7 @@ public class MailLogActivity extends AppCompatActivity {
     }
 
     public void submit(View view) {
-        login(this, addresser, handler);
-
+        LoginUtils.login(this, addresser, handler2);
     }
 
     private void setProtocol() {
@@ -172,7 +172,7 @@ public class MailLogActivity extends AppCompatActivity {
                 Intent intent = new Intent(MailLogActivity.this, MailListActivity.class);
                 intent.putExtra("addresser",addresser);
                 startActivity(intent);
-                BaseApplication.addresser = addresser;
+                App.addresser = addresser;
                 finish();
             } else {
                 Toast.makeText(MailLogActivity.this, "验证失败", Toast.LENGTH_SHORT).show();
@@ -180,4 +180,28 @@ public class MailLogActivity extends AppCompatActivity {
 
         }
     };
+
+    @SuppressLint("HandlerLeak")
+    Handler handler2 = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+
+            if ((Boolean) msg.obj) {
+                Toast.makeText(MailLogActivity.this, "验证成功", Toast.LENGTH_SHORT).show();
+                    DBAddresser.getInstance().addAddresser(addresser);
+                    Intent intent = new Intent(MailLogActivity.this, MailListActivity.class);
+                    intent.putExtra("addresser",addresser);
+                    startActivity(intent);
+                    //作为当前邮箱账号保存起来。
+                    PreferenceManager.setString(MailLogActivity.this, "addresser", addresser.account);
+                    //有邮箱的账号做表名，在数据库中建一个存储mial的表
+                    DBMail.getInstance().createTable(addresser);
+            } else {
+                Toast.makeText(MailLogActivity.this, "验证失败", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+    };
+
 }

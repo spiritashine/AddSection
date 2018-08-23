@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/padding_larger"
+    android:paddingTop="@dimen/padding_larger"
+    android:background="@drawable/space_grey"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_weight="1"
+        style="@style/ll_circle_contact">
+
+        <ImageView
+            android:id="@+id/iv_choosephoto_insertimg"
+            style="@style/img_circle_contact"
+            android:background="@drawable/selecter_circle_space"
+            android:src="@mipmap/attach_choose_photo" />
+
+        <TextView
+            style="@style/tv_circle_contact"
+            android:text="@string/photo_album" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        style="@style/ll_circle_contact">
+
+        <ImageView
+            android:id="@+id/iv_takephoto_insertimg"
+            style="@style/img_circle_contact"
+            android:background="@drawable/selecter_circle_space"
+            android:src="@mipmap/attach_take_photo" />
+
+        <TextView
+            style="@style/tv_circle_contact"
+            android:text="@string/take_photo" />
+    </LinearLayout>
+
+</LinearLayout>

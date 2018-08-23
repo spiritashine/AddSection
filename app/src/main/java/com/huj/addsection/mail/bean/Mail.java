@@ -7,9 +7,9 @@ import android.text.TextUtils;
 import android.text.format.Formatter;
 
 
-import com.huj.addsection.BaseApplication;
+import com.huj.addsection.App;
 import com.huj.addsection.mail.db.DBContacts;
-import com.huj.addsection.mail.manager.FileUtils;
+import com.huj.addsection.mail.utils.FileUtils;
 import com.huj.addsection.mail.manager.L;
 import com.huj.addsection.mail.manager.TimeManager;
 
@@ -35,7 +35,7 @@ import javax.mail.internet.MimeUtility;
  * 邮件的实体类
  */
 public class Mail implements Parcelable {
-    public final static int PAGE_COUNT = 20;
+    public final static int PAGE_COUNT = 30;
     public Message message;
 
     public final static int MAIL_TYPE_INBOX = 0;//收件箱
@@ -72,6 +72,46 @@ public class Mail implements Parcelable {
 
     public boolean isSelected = false;
 
+    public String getFroms() {
+        return froms;
+    }
+
+    public void setFroms(String froms) {
+        this.froms = froms;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getContentNoImage() {
+        return contentNoImage;
+    }
+
+    public void setContentNoImage(String contentNoImage) {
+        this.contentNoImage = contentNoImage;
+    }
+
+    public String getContentHint() {
+        return contentHint;
+    }
+
+    public void setContentHint(String contentHint) {
+        this.contentHint = contentHint;
+    }
+
+    public String getContentWithImage() {
+        return contentWithImage;
+    }
+
+    public void setContentWithImage(String contentWithImage) {
+        this.contentWithImage = contentWithImage;
+    }
+
     public Mail() {
     }
 
@@ -96,7 +136,7 @@ public class Mail implements Parcelable {
                 String name = string.substring(0, string.indexOf("<"));
                 contacts = new Contacts(name, mail);
             }
-//            if (contacts.mail.equals(BaseApplication.addresser.account)) {
+//            if (contacts.mail.equals(App.addresser.account)) {
 //                contacts.name = "我";
 //            }
             return contacts;
@@ -229,7 +269,7 @@ public class Mail implements Parcelable {
                 if (disposition != null && disposition.equals(Part.ATTACHMENT)) {
                     fileName = MimeUtility.decodeText(mpart.getFileName());
                     String path = Environment.getExternalStorageDirectory() + "/Xiniuyun/attach/" + fileName;
-                    Attach attach = new Attach(fileName, path, mpart.getInputStream(), Formatter.formatFileSize(BaseApplication.getApplication(), mpart.getSize()));
+                    Attach attach = new Attach(fileName, path, mpart.getInputStream(), Formatter.formatFileSize(App.getApplication(), mpart.getSize()));
                     attchsList.add(attach);
                 } else if (mpart.isMimeType("multipart/*")) {
                     getAttachMent(mpart);

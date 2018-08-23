@@ -1,4 +1,4 @@
-package com.huj.addsection.mail.manager;
+package com.huj.addsection.mail.utils;
 
 import android.util.Log;
 

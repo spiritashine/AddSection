@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_file_attach_mail_details"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/boder_rectangle"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_file_attach_mail_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:src="@mipmap/attachment_download" />
+
+        <TextView
+            android:id="@+id/tv_file_name_mail_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_file_attach_mail_details"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:padding="@dimen/padding_normal"
+            android:text="1212121.mp3"
+            android:textColor="@color/text_tv_normal"
+            android:textSize="@dimen/text_size_smaller" />
+
+        <TextView
+            android:id="@+id/tv_file_size_mail_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="middle"
+            android:padding="@dimen/padding_normal"
+            android:text="12MB"
+            android:textColor="@color/text_tv_grey"
+            android:textSize="@dimen/text_size_smaller" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pic_attach_mail_details"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/boder_rectangle"
+        android:padding="1dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_pic_attach_mail_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/attach_file_icon_image" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progress_attach_mail_details"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/boder_rectangle"
+        android:padding="1dp">
+
+        <ProgressBar
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/progressbar_login"
+            android:progressDrawable="@drawable/progressbar_login" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

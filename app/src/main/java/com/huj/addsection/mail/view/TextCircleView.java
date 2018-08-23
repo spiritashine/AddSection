@@ -1,4 +1,4 @@
-package com.huj.addsection.mail.manager;
+package com.huj.addsection.mail.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

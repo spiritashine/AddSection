@@ -6,11 +6,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.huj.addsection.BaseApplication;
+import com.huj.addsection.App;
 import com.huj.addsection.mail.bean.Contacts;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class DBContacts {
 
@@ -24,7 +23,7 @@ public class DBContacts {
 
     public static DBContacts getInstance() {
         if (dBContacts == null) {
-            dBContacts = new DBContacts(BaseApplication.getApplication());
+            dBContacts = new DBContacts(App.getApplication());
         }
         return dBContacts;
     }

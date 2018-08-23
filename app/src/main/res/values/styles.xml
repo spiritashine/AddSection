@@ -8,4 +8,413 @@
         <item name="colorAccent">#999999</item>
     </style>
 
+    <!--分割线style-->
+    <style name="split_line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line</item>
+    </style>
+
+    <!--分割线style-->
+    <style name="split_line_vertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line</item>
+    </style>
+
+    <!--mainactivity下面的-->
+    <style name="main_tab_bottom">
+        <item name="android:textSize">@dimen/bottom_tab_font_size</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingTop">@dimen/bottom_tab_padding_up</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+
+    <!--fragment_mail popupwindow-->
+    <style name="ll_popup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="img_popup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="tv_popup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <!--fragment_mail drawer-->
+    <style name="rl_drawer_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/fragment_mail_drawer_item_height</item>
+        <item name="android:background">@color/background</item>
+    </style>
+
+    <style name="iv_drawer">
+        <item name="android:layout_width">@dimen/fragment_mail_drawer_item_height</item>
+        <item name="android:layout_height">@dimen/fragment_mail_drawer_item_height</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="rl_drawer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+
+    </style>
+
+    <style name="tv_drawer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="tv_drawer_count">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_tv_grey</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <!--contactdetailsactivity 中间的圆形图片按钮“发邮件”“邮件往来”“致电”-->
+    <style name="ll_circle_contact">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/padding_large</item>
+        <item name="android:paddingRight">@dimen/padding_large</item>
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="img_circle_contact">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/circle_space_grey</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="tv_circle_contact">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:textSize">@dimen/text_size_smaller</item>
+    </style>
+
+    <!--contactdetailsactivity 下面的 "邮件"，"电话"，"地址"，"备注"-->
+    <style name="ll_contact_details">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/selecter_btn</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="img_contact_details">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin_normal</item>
+        <item name="android:layout_marginRight">@dimen/margin_normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="tv_contact_details">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingBottom">@dimen/padding_normal</item>
+        <item name="android:paddingTop">@dimen/padding_normal</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+
+    <!--edittext 后面的小叉“x”-->
+    <style name="delete">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitEnd</item>
+        <item name="android:src">@mipmap/delete</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_marginRight">@dimen/margin_normal</item>
+    </style>
+
+    <!--  contactedit 里面的editetext  -->
+    <style name="tv_contact_edit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/boder_bottom</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingBottom">@dimen/padding_normal</item>
+        <item name="android:paddingTop">@dimen/padding_normal</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <!--contacteditsactivity  "姓名"，"公司"，"部门"，"职位"-->
+    <style name="tl_contact_edit">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin_normal</item>
+        <item name="android:layout_marginRight">@dimen/margin_normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_tv_grey</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <!--contact_history导航栏-->
+    <style name="contact_history_tab">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@drawable/selecter_contact_history_text</item>
+    </style>
+
+    <!--minefragment 后面的“>”-->
+    <style name="arrow_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitEnd</item>
+        <item name="android:src">@mipmap/arrow_left</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/margin_normal</item>
+    </style>
+
+    <!--个人资料相关内容 每一个item长条 -->
+    <style name="rl_item_personal_data">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/selecter_btn</item>
+        <item name="android:paddingLeft">@dimen/padding_normal</item>
+    </style>
+
+    <!--个人资料相关内容 每一个item长条  左边的textview  -->
+    <style name="tv_item_left_personal_data">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <!--个人资料相关内容 每一个item长条  右边的textview  -->
+    <style name="tv_item_right_personal_data">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">30dp</item>
+    </style>
+
+    <!--犀牛钱包中  交易记录的listview的item中的textview  -->
+    <style name="tv_item_transaction_record">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/text_tv_grey</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <!--新邮件提醒 每一个item长条 -->
+    <style name="rl_item_newmail_remind">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_height</item>
+        <item name="android:background">@drawable/selecter_btn</item>
+        <item name="android:paddingLeft">@dimen/padding_normal</item>
+    </style>
+
+    <!--新邮件提醒 每一个item长条  左边的textview  -->
+    <style name="tv_item_left_newmail_remind">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:textSize">@dimen/text_size_normal_than</item>
+    </style>
+
+    android:background="@drawable/switcher"
+    android:=""
+
+    <!--新邮件提醒 每一个item长条  右边的checkbox -->
+    <style name="cb_item_right_newmail_remind">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/switcher</item>
+        <item name="android:layout_marginRight">@dimen/padding_normal</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <!--服务器设置  左边的textview  -->
+    <style name="tv_server_setting">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:background">@drawable/boder_bottom</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <!--服务器设置  右边的RelativeLayout 里面是edittext -->
+    <style name="rl_server_setting">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/boder_bottom</item>
+    </style>
+
+    <!--autodeleteemail下面的-->
+    <style name="rb_auto_delete_mail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_height</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/text_tv_normal</item>
+        <item name="android:background">@drawable/boder_bottom</item>
+        <item name="android:paddingRight">@dimen/padding_normal</item>
+        <item name="android:drawableRight">@drawable/selecter_mail_sign_check</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <!--activity_write_mail 下面的 "收件人"，"抄送"，"密送"，"主题"-->
+    <style name="ll_write_mail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_normal</item>
+        <item name="android:layout_marginRight">@dimen/margin_normal</item>
+
+
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/boder_bottom</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--activity_write_mail 下面的 "收件人"，"抄送"，"密送"，"主题"-->
+    <style name="tv_write_mail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:paddingTop">@dimen/margin_normal</item>
+        <item name="android:paddingBottom">@dimen/margin_normal</item>
+        <item name="android:layout_marginLeft">@dimen/margin_normal</item>
+        <item name="android:layout_marginRight">@dimen/margin_normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_tv_grey</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <!--activity_write_mail 下面的 "收件人"，"抄送"，"密送"  flowlayout-->
+    <style name="flowlayout_write_mail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--activity_write_mail 下面的 "收件人"，"抄送"，"密送"  edittext-->
+    <style name="et_write_mail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:hint">@string/space</item>
+        <item name="android:lines">1</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textColor">@color/text_tv_grey</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+    android:layout_width=""
+    android:layout_height="30dp"
+    android:=""
+    android:=""
+    android:=""
+    android:=""
+    android:="visible"
+
+    <!--activity_write_mail 下面的 "收件人"，"抄送"，"密送"  后面的添加按钮-->
+    <style name="add_write_mail">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@mipmap/mail_compose_add_contact_btn</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+
+    <style name="dialog_progress" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/background</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+
+    <!--邮件详情里面点击详情，弹出收件人，抄送人，密送人的详情 -->
+    <style name="ll_item_popup_mail_details" parent="@android:style/Theme.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@drawable/boder_top</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">@dimen/padding_normal</item>
+        <item name="android:paddingTop">@dimen/padding_normal</item>
+    </style>
+
+
+    <style name="tv_sender_item_popup_mail_details" parent="@android:style/Theme.Dialog">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxEms">8</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_tv_grey</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="gv_popup_mail_details" parent="@android:style/Theme.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:listSelector">@color/white</item>
+        <item name="android:numColumns">4</item>
+    </style>
+
 </resources>

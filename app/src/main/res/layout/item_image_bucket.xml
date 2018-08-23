@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/iv_image_bucket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/attach_file_icon_image"
+          />
+
+        <RelativeLayout
+            android:id="@+id/rl_image_bucket_selected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundselectedImage">
+
+            <TextView
+                android:id="@+id/tv_image_bucket_selected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_space_blue"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name_image_bucket"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center_vertical"
+        android:text="相机"
+        android:textColor="@color/text_tv_normal"
+        android:textSize="@dimen/text_size_normal" />
+
+    <TextView
+        android:id="@+id/count_image_bucket"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="top"
+        android:text="34"
+        android:textColor="@color/text_tv_grey"
+        android:textSize="@dimen/text_size_normal" />
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/space_grey"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/padding_larger"
+    android:paddingTop="@dimen/padding_larger">
+
+    <LinearLayout
+        style="@style/ll_circle_contact"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_choosephoto_addattach"
+            style="@style/img_circle_contact"
+            android:background="@drawable/selecter_circle_space"
+            android:src="@mipmap/attach_choose_photo" />
+
+        <TextView
+            style="@style/tv_circle_contact"
+            android:text="@string/photo_album" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ll_circle_contact"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_takephoto_addattach"
+            style="@style/img_circle_contact"
+            android:background="@drawable/selecter_circle_space"
+            android:src="@mipmap/attach_take_photo" />
+
+        <TextView
+            style="@style/tv_circle_contact"
+            android:text="@string/take_photo" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ll_circle_contact"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_choosefile_addattach"
+            style="@style/img_circle_contact"
+            android:background="@drawable/selecter_circle_space"
+            android:src="@mipmap/attach_choose_file" />
+
+        <TextView
+            style="@style/tv_circle_contact"
+            android:text="@string/file" />
+    </LinearLayout>
+
+</LinearLayout>

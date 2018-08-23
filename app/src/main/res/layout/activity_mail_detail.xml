@@ -1,96 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mail.MailDetailActivity">
-    <RelativeLayout
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/background">
+
+    <com.huj.addsection.mail.view.MyScrollView
+        android:id="@+id/msv_details"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_toRightOf="@+id/mail_detail_back"
-            android:text="邮箱"
-            android:textColor="@color/textColor"
-            android:textSize="16sp"
-            android:padding="10sp"
-            android:gravity="left"
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <ImageView
-            android:id="@+id/mail_detail_back"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="20dp"
-            android:src="@drawable/btn_youjiantou_nor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
-    <TextView
-        android:background="#ccc"
-        android:textSize="16sp"
-        android:padding="8dp"
-        android:gravity="center"
-        android:text="title"
-        android:textColor="@color/textColor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:scrollbars="none">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.huj.addsection.mail.manager.TextCircleView
-                    android:text="胡"
-                    android:gravity="center"
-                    android:textSize="16dp"
-                    android:layout_margin="10dp"
-                    android:textColor="#a00"
-                    android:id="@+id/mail_detail_icon"
-                    android:layout_width="44dp"
-                    android:layout_height="44dp" />
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundgrey">
+
                 <TextView
-                    android:id="@+id/mail_detail_from"
-                    android:text="from"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@+id/mail_detail_icon"
-                    android:textColor="@color/textColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/mail_detail_date"
-                    android:text="date"
-                    android:layout_marginRight="8dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/textColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/mail_detail_receive"
-                    android:text="receive"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@+id/mail_detail_from"
-                    android:layout_toRightOf="@+id/mail_detail_icon"
-                    android:textColor="@color/textColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:id="@+id/tv_subject_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_height"
+                    android:background="@color/backgroundgrey"
+                    android:paddingBottom="@dimen/padding_larger"
+                    android:paddingLeft="@dimen/padding_larger"
+                    android:paddingTop="@dimen/padding_normal"
+                    android:text="我是标题"
+                    android:textColor="@color/text_tv_normal"
+                    android:textSize="@dimen/text_size_large" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rr_title2_detail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/rl_title2_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/background"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.huj.addsection.mail.view.TextCircleView
+                        android:id="@+id/ctv_details"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:gravity="center"
+                        android:text="英"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/from_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxEms="8"
+                            android:paddingBottom="@dimen/padding_small1"
+                            android:paddingLeft="@dimen/padding_normal"
+                            android:paddingTop="@dimen/padding_normal"
+                            android:singleLine="true"
+                            android:text="我是发件人我是发件人"
+                            android:textColor="@color/text_tv_normal" />
+
+                        <TextView
+                            android:id="@+id/date_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/from_details"
+                            android:padding="@dimen/padding_normal"
+                            android:text="2017-08-12 16:12"
+                            android:textColor="@color/text_tv_grey" />
+
+                        <ImageView
+                            android:id="@+id/iv_iscontainattch_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toRightOf="@+id/date_details"
+                            android:padding="@dimen/padding_normal"
+                            android:src="@mipmap/attach"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/to_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/from_details"
+                            android:layout_marginLeft="@dimen/padding_normal"
+                            android:ellipsize="end"
+                            android:maxEms="10"
+                            android:singleLine="true"
+                            android:text="发至 张三、李四、李四、李四"
+                            android:textColor="@color/text_tv_grey" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
             </RelativeLayout>
 
             <WebView
-                android:id="@+id/mail_detail_web"
+                android:id="@+id/webv_content_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/background" />
 
+            <LinearLayout
+                android:id="@+id/ll_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:layout_marginBottom="80dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:drawableLeft="@mipmap/attach"
+                    android:text="附件"
+                    android:textColor="@color/text_tv_grey"
+                    android:textSize="@dimen/text_size_small" />
+
+                <com.huj.addsection.mail.view.MyGridView
+                    android:id="@+id/gv_item_attach_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_max1"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@null"
+                    android:numColumns="2"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </com.huj.addsection.mail.view.MyScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_top_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_title1_details"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@color/backgroundgrey"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/back_details"
+                android:layout_width="@dimen/item_height"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@mipmap/title_bar_back" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
